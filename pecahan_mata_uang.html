@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pecahan</title>
+  <style>
+    .tombol {
+      background-color: aqua;
+    }
+
+    .table {
+      background-color: greenyellow;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form name="nomer">
+    <table class="table">
+      <tr>
+        <td>Angka 1</td>
+        <td><input type="number" name="angka1"></td>
+        <td>Hasil</td>
+        <td><Input type="number" name="hasil"></td>
+        <td><Input type="number" name="hasil1"></td>
+        <td><Input type="number" name="hasil2"></td>
+        <td><Input type="number" name="hasil3"></td>
+        <td><Input type="number" name="hasil4"></td>
+        <td><Input type="number" name="hasil5"></td>
+        <td><Input type="number" name="hasil6"></td>
+      </tr>
+
+      <tr>
+        <td align="center">
+          <input class="tombol" type="button" value="+" onclick="Hasil()">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    function Hasil() {
+      var n1 = parseFloat(document.nomer.angka1.value);
+
+      if (n1 >= 100000) {
+        document.nomer.hasil.value = 2
+      }
+      if (n1 >= 50000) {
+        document.nomer.hasil1.value = 1
+      }
+      if (n1 >= 20000) {
+        document.nomer.hasil2.value = 1
+      }
+      if (n1 >= 10000) {
+        document.nomer.hasil3.value = 0
+      }
+      if (n1 >= 5000) {
+        document.nomer.hasil4.value = 0
+      }
+      if (n1 >= 2000) {
+        document.nomer.hasil5.value = 1
+      }
+      if (n1 >= 1000) {
+        document.nomer.hasil6.value = 1
+      }
+    }
+  </script>
+</body>
+
+</html>

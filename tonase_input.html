@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pecahan</title>
+  <style>
+    .tombol {
+      background-color: aqua;
+    }
+
+    .table {
+      background-color: greenyellow;
+      margin: auto;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form name="nomer">
+    <table class="table">
+      <tr>
+        <td>Angka 1</td>
+        <td><input type="number" name="angka1"></td>
+        <td>Hasil</td>
+        <td><Input type="text" name="hasil"></td>
+      </tr>
+
+      <tr>
+        <td align="center">
+          <input class="tombol" type="button" value="hasil" onclick="Hasil()">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    function Hasil() {
+      var n1 = parseFloat(document.nomer.angka1.value);
+      var a = 21;
+      var b = 24;
+
+      if (n1 >= 21 && n1 <= 24) {
+        document.nomer.hasil.value = 'sukses'
+      } else {
+        if (n1 > 24) {
+          document.nomer.hasil.value = 'masukan 42 - 48'
+        }
+      }
+
+      if (n1 >= 42 && n1 <= 48) {
+        document.nomer.hasil.value = 'sukses'
+      } else {
+        document.nomer.hasil.value = 'gagal'
+      }
+
+    }
+  </script>
+</body>
+
+</html>
